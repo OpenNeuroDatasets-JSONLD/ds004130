@@ -4,6 +4,8 @@ Modality-agnostic files were copied over and the `CHANGES` file was updated.  Da
 
 `python phenotype.py aggregate subject -i segregated_subject -o aggregated_subject`
 
+`phenotype.py` came from the GitHub repository: https://github.com/ericearl/bids-phenotype
+
 ## THE ORIGINAL DATASET ds003982 README FOLLOWS
 
 A comprehensive clinical, MRI, and MEG collection characterizing healthy research volunteers collected at the National Institute of Mental Health (NIMH) Intramural Research Program (IRP) in Bethesda, Maryland using medical and mental health assessments, diagnostic and dimensional measures of mental health, cognitive and neuropsychological functioning, structural and functional magnetic resonance imaging (MRI), along with diffusion tensor imaging (DTI), and a comprehensive magnetoencephalography battery (MEG).
@@ -58,7 +60,7 @@ At the time of the MRI scan, volunteers are administered a subset of tasks from 
 
 ## MEG
 
-An optional MEG study was added to the protocol approximately one year after the study was initiated, thus there are relatively fewer MEG recordings in comparison to the MRI dataset. MEG studies are performed on a 275 channel CTF MEG system (CTF MEG, Coquiltam BC, Canada). The position of the head was localized at the beginning and end of each recording using three fiducial coils. These coils were placed 1.5 cm above the nasion, and at each ear, 1.5 cm from the tragus on a line between the tragus and the outer canthus of the eye. For 48 participants (as of 2/1/2022), photographs were taken of the three coils and used to mark the points on the T1 weighted structural MRI scan for co-registration. For the remainder of the participants (n=16 as of 2/1/2022), a Brainsight neuronavigation system (Rogue Research, Montréal, Québec, Canada) was used to coregister the MRI and fiducial localizer coils in realtime prior to MEG data acquisition.
+An optional MEG study was added to the protocol approximately one year after the study was initiated, thus there are relatively fewer MEG recordings in comparison to the MRI dataset. MEG studies are performed on a 275 channel CTF MEG system (CTF MEG, Coquiltam BC, Canada). The position of the head was localized at the beginning and end of each recording using three fiducial coils. These coils were placed 1.5 cm above the nasion, and at each ear, 1.5 cm from the tragus on a line between the tragus and the outer canthus of the eye. For 48 participants (as of 2/1/2022), photographs were taken of the three coils and used to mark the points on the T1 weighted structural MRI scan for co-registration. For the remainder of the participants (n=16 as of 2/1/2022), a Brainsight neuronavigation system (Rogue Research, MontrÃ©al, QuÃ©bec, Canada) was used to coregister the MRI and fiducial localizer coils in realtime prior to MEG data acquisition.
 
 ## Specific Measures within Dataset
 
@@ -72,7 +74,7 @@ Online and In-person behavioral and clinical measures, along with the correspond
 |           | Edinburgh Handedness Inventory (EHI)                                                            | ehi                      |
 |           | Health History Form                                                                             | health_history_questions |
 |           | Perceived Health Rating - self                                                                  | health_rating            |
-|           | DSM-5 Self-Rated Level 1 Cross-Cutting Symptoms Measure – Adult (modified)                      | mental_health_questions  |
+|           | DSM-5 Self-Rated Level 1 Cross-Cutting Symptoms Measure â Adult (modified)                      | mental_health_questions  |
 |           | World Health Organization Disability Assessment Schedule 2.0 (WHODAS 2.0)                       | whodas                   |
 | In-Person | Adverse Childhood Experiences (ACEs)                                                            | ace                      |
 |           | Chemistry Panel                                                                                 | acute_care               |
@@ -124,30 +126,30 @@ Below is a BIDS-compliant file/folder tree as it appears for subjects on OpenNeu
 
 ```shell
 sub-ON<subject>
-    └── ses-01
-        ├── anat
-        │   └── sub-ON<subject>_ses-01_acq-<desc>_run-<index>_<suffix>.<json|nii.gz>
-        ├── asl
-        │   └── sub-ON<subject>_ses-01_run-<index>_asl.<json|nii.gz>
-        ├── dwi
-        │   └── sub-ON<subject>_ses-01_run-<index>_dwi.<bvec|bval|json|nii.gz>
-        ├── fmap
-        │   └── sub-ON<subject>_ses-01_acq-<desc>_dir-<direction>_run-<index>_epi.<bvec|bval|json|nii.gz>
-        ├── func
-        │   └── sub-ON<subject>_ses-01_task-<taskname>_run-<index>_<suffix>.<json|nii.gz>
-        ├── meg
-        │   ├── sub-ON<subject>_ses-01_task-<taskname>_run-01_<meg|coordsystem>.json
-        │   ├── sub-ON<subject>_ses-01_task-<taskname>_run-01_<channels|events>.tsv
-        │   └── sub-ON<subject>_ses-01_task-<taskname>_run-01_meg.ds
-        │       ├── BadChannels
-        │       ├── bad.segments
-        │       ├── ClassFile.cls
-        │       ├── MarkerFile.mrk
-        │       ├── params.dsc
-        │       ├── processing.cfg
-        │       ├── sub-ON<subject>_ses-01_task-<taskname>_run-01_meg.<extension>
-        │       └── sub-ON<subject>_ses-01_task-<taskname>_run-01.xml
-        └── sub-ON<subject>_ses-01_scans.<json|tsv>
+    âââ ses-01
+        âââ anat
+        â   âââ sub-ON<subject>_ses-01_acq-<desc>_run-<index>_<suffix>.<json|nii.gz>
+        âââ asl
+        â   âââ sub-ON<subject>_ses-01_run-<index>_asl.<json|nii.gz>
+        âââ dwi
+        â   âââ sub-ON<subject>_ses-01_run-<index>_dwi.<bvec|bval|json|nii.gz>
+        âââ fmap
+        â   âââ sub-ON<subject>_ses-01_acq-<desc>_dir-<direction>_run-<index>_epi.<bvec|bval|json|nii.gz>
+        âââ func
+        â   âââ sub-ON<subject>_ses-01_task-<taskname>_run-<index>_<suffix>.<json|nii.gz>
+        âââ meg
+        â   âââ sub-ON<subject>_ses-01_task-<taskname>_run-01_<meg|coordsystem>.json
+        â   âââ sub-ON<subject>_ses-01_task-<taskname>_run-01_<channels|events>.tsv
+        â   âââ sub-ON<subject>_ses-01_task-<taskname>_run-01_meg.ds
+        â       âââ BadChannels
+        â       âââ bad.segments
+        â       âââ ClassFile.cls
+        â       âââ MarkerFile.mrk
+        â       âââ params.dsc
+        â       âââ processing.cfg
+        â       âââ sub-ON<subject>_ses-01_task-<taskname>_run-01_meg.<extension>
+        â       âââ sub-ON<subject>_ses-01_task-<taskname>_run-01.xml
+        âââ sub-ON<subject>_ses-01_scans.<json|tsv>
 ```
 
 Definitions:
